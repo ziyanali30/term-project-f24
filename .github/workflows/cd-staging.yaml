@@ -16,9 +16,9 @@ jobs:
         with:
           path: "./release"
           name: "build-artifact-development"
-          
+
   deploy-staging-job:
-    needs: "build-release-job"
+    needs: "build-staging-job"
     environment: "staging-env"
     permissions:
       pages: write
